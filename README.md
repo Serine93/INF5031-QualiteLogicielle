@@ -10,9 +10,6 @@ Executez la commande ``npm install -D @playwright/test`` dans chaque sous dossie
 
 puis ``npm install --save-dev @cucumber/cucumber ts-node typescript`` dans le sous dossier tp3
 
-Pour executer le programme il faut :
-
-[...]
 
 ## Auteurs
 
