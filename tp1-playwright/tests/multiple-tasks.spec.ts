@@ -13,8 +13,8 @@ test('Ajouter deux tâches TODO et en supprimer une', async ({ page }) => {
     await item.hover(); 
     await item.getByRole('button', { name: 'Delete' }).click();                            // supprimer une tâche                                          // supprimer une tâche
     //await page.pause();
-    await expect(page.getByText('Aller courir')).toBeVisible();                            // vérification tâche non supprimée toujours visible
-    await expect(page.getByText('Acheter du pain')).not.toBeVisible();                     // vérification tâche supprimée non visible
+    await expect(page.getByText('Aller courir')).toBeVisible();                            // vérifier tâche non supprimée toujours visible
+    await expect(page.getByText('Acheter du pain')).not.toBeVisible();                     // vérifier tâche supprimée non visible
     //await page.pause();
 });
 
