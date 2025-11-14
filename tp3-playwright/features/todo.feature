@@ -1,4 +1,5 @@
 Feature: Gestion des tâches
+
     Scenario: Ajouter une tâche
         Given je suis sur la page TodoMVC
         When j’ajoute la tâche "Acheter du café"
@@ -9,7 +10,6 @@ Feature: Gestion des tâches
         When j’ajoute la tâche "Faire le ménage"
         And je supprime la tâche "Faire le ménage"
         Then la tâche "Faire le ménage" n’est plus visible dans la liste
-
 
     Scenario: Marquer une tâche comme terminée
         Given je suis sur la page TodoMVC
