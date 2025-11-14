@@ -18,9 +18,11 @@ test('Mock de la liste des utilisateurs récupérée avec GET', async ({ page })
     await page.click('text=List Users');
     await expect(page.getByText('Jean')).toBeVisible();
     await expect(page.getByText('Claire')).toBeVisible();
-    await page.pause();
+    //await page.pause();
+
     await page.unroute('**/api/users?page=2');
-    await page.pause();
+
+    //await page.pause();
 });
 
 test('Mock de la création d\'un utilisateur avec POST', async ({ page }) => {
@@ -65,7 +67,9 @@ test('Mock de la création d\'un utilisateur avec POST', async ({ page }) => {
     expect(response.id).toBe("526");
     expect(response.createdAt).toBe("2025-11-14T14:05:22.219Z");
 
-    await page.pause();
+    await page.unroute('**/api/users');
+
+    //await page.pause();
 });
 
 test('Mock de la suppression d\'un utilisateur avec DELETE', async ({ page }) => {
@@ -95,7 +99,9 @@ test('Mock de la suppression d\'un utilisateur avec DELETE', async ({ page }) =>
 
     expect(responseStatus).toBe(204);
 
-    await page.pause();
+    await page.unroute('**/api/users/2');
+
+    //await page.pause();
 });
 
 test('Mock de la mise à jour d\'un utilisateur avec PUT', async ({ page }) => {
@@ -139,7 +145,9 @@ test('Mock de la mise à jour d\'un utilisateur avec PUT', async ({ page }) => {
     expect(response.job).toBe("zion resident");
     expect(response.updatedAt).toBe("2025-11-14T14:05:22.219Z");
 
-    await page.pause();
+    await page.unroute('**/api/users/2');
+
+    //await page.pause();
 });
 
 test('Mock de la modification partielle d\'un utilisateur avec PATCH', async ({ page }) => {
@@ -180,8 +188,11 @@ test('Mock de la modification partielle d\'un utilisateur avec PATCH', async ({ 
     expect(response.job).toBe("zion resident");
     expect(response.updatedAt).toBe("2025-11-14T14:05:22.219Z");
 
-    await page.pause();
+    await page.unroute('**/api/users/2');
+
+    //await page.pause();
 });
 
 //npx playwright test tests/reqres.users.spec.ts --headed --project=chromium 
+//npx playwright test tests/reqres.users.spec.ts --headed
 //npx playwright show-report

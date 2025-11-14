@@ -18,5 +18,6 @@ test('Ajouter deux tâches TODO et en supprimer une', async ({ page }) => {
     //await page.pause();
 });
 
-//npx playwright test tests/multiple-tasks.spec.ts --headed  
+//npx playwright test tests/multiple-tasks.spec.ts --headed --project=chromium  
+//npx playwright test tests/multiple-tasks.spec.ts --headed
 //npx playwright show-report

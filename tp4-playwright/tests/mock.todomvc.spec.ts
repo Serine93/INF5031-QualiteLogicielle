@@ -35,4 +35,5 @@ test('Mock localStorage avec tâches existantes', async ({ page }) => {
 });
 
 //npx playwright test tests/mock.todomvc.spec.ts --headed --project=chromium
+//npx playwright test tests/mock.todomvc.spec.ts --headed
 //npx playwright show-report
